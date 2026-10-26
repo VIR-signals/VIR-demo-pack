@@ -21,7 +21,7 @@ VIR Signals 编辑器扩展的双事件示范语音包——也是你复制去�
 2. **改 `id`**（`pack/manifest.json`）：你的包名，全小写短横线，全宇宙唯一（`my-cool-pack`）。
 3. **改 `name` / `version` / `author`**——`name` 显示在选包器里，宜短（14 字符内放得进状态栏）。
 4. **换音频**：把 `pack/sounds/` 换成你的 WAV/MP3。限制：单条 ≤20MB，建议 ≤2 秒（progress 类 ≤1 秒）。文件名用全小写，manifest 里写的路径与实际文件名**大小写逐字符一致**——Linux 上大小写对不上会直接找不到文件。
-5. **改 `slots` 映射**：键=28 槽位表里的槽位名（见 VIR Signals 扩展 README）。`error` 这类共享槽位会同时换掉它名下全部事件的声音。没映射的槽位保留原声——两个槽位就是一个完整的包。
+5. **改 `slots` 映射**：键=槽位名。全部 28 个槽位：error、warning、break、quickFixes、taskCompleted、taskFailed、voiceRecordingStarted、voiceRecordingStopped、save、format、clear、progress、foldedAreas、confetti、terminalBell、terminalCommandSucceeded、diffLineInserted、diffLineModified、diffLineDeleted、chatEditModifiedFile、chatUserActionRequired、codeActionTriggered、codeActionApplied、editsKept、editsUndone、nextEditSuggestion、requestSent、responseReceived（末位还接受编号子键 responseReceived1–4）。`error` 这类共享槽位会同时换掉它名下全部事件的声音。没映射的槽位保留原声——两个槽位就是一个完整的包。
 6. **如实填 `license` 与 `sourceLicense`。** `sourceLicense` 声明音频从哪来：`original`（自己做的）、`game-asset`、`third-party-cc0`、`unknown` 四选一；来源要求署名时加一份 `SOURCE.txt`。
 
 ## 发布
